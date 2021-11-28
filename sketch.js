@@ -44,17 +44,7 @@ function setup() {
   invisibleGround = createSprite(400,350,1600,10);
   invisibleGround.visible = false;
 
-  gameOver = createSprite(400,100);
-  gameOver.addImage(gameOverImg);
-  
-  restart = createSprite(550,140);
-  restart.addImage(restartImg);
-  
-  gameOver.scale = 0.5;
-  restart.scale = 0.1;
-
-  gameOver.visible = false;
-  restart.visible = false;
+ //gameover n restart
   
   
   shrubsGroup = new Group();
@@ -93,10 +83,10 @@ function draw() {
       collidedSound.play();
       gameState = END;
     }
-    if(shrubsGroup.isTouching(kangaroo)){
-      score = score + 1;
-      shrubsGroup.destroyEach();
-    }
+    //shrubs touching
+    
+    
+    
   }
   else if (gameState === END) {
     gameOver.x=camera.position.x;
